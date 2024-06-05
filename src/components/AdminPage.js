@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import VIP from '../assets/vip.png';
-import Logo from '../assets/logo.png';
+import CheckIcon from '../assets/checked.png'
 import Banner from '../assets/detbanner.png';
+import CancelIcon from '../assets/cancel.png'
 const AdminPage = () => {
 
 
@@ -202,17 +202,6 @@ const absentGuestsCount = totalGuestsCount - attendedGuestsCount;
 
   return (
     <div>
-      {/* <section>
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-md-12 d-flex justify-content-center my-3'>
-              <a href='#'>
-                <img src={Logo} className='brand-logo' alt='DET Logo' />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section>
         <div className='container-fluid'>
           <div className='row'>
@@ -465,7 +454,23 @@ const absentGuestsCount = totalGuestsCount - attendedGuestsCount;
                           <td>{guest.title}</td>
                           <td>{guest.organization}</td>
                           <td>{guest.localinternational}</td>
-                          <td>{guest.status}</td>
+                          <td>
+                            {guest.status === 'attended' ? (
+                              <img
+                                src={CheckIcon}
+                                alt='Attended'
+                                style={{ width: '20px', height: '20px' }}
+                              />
+                            ) : guest.status === 'absent' ? (
+                              <img
+                                src={CancelIcon}
+                                alt='Absent'
+                                style={{ width: '20px', height: '20px' }}
+                              />
+                            ) : (
+                              guest.status
+                            )}
+                          </td>
                         </tr>
                       ))}
                     </tbody>
