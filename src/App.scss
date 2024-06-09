@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: #303030;
 }
 
 .vip-background {
@@ -27,3 +28,74 @@
 .brand-logo{
   width: 20rem;
 }
+
+.agenda-container {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #00576b;
+  padding: 20px;
+}
+
+.agenda-header {
+  text-align: left;
+  padding: 20px 0;
+}
+
+.agenda-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.agenda-content {
+  margin-top: 20px;
+}
+
+.agenda-item {
+  display: flex;
+  justify-content: space-between;
+  background: #00707c;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.agenda-time {
+  flex-basis: 20%;
+  text-align: right;
+  font-size: 1.2em;
+  padding-right: 20px;
+  border-right: 1px solid #ffffff;
+}
+
+.agenda-description {
+  flex-basis: 75%;
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+
+.agenda-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.agenda-logo {
+  width: 100px;
+}
+
+.agenda-footer p {
+  margin: 10px 0 0;
+  font-size: 1em;
+  color: #b0c4de;
+}
+
+.agenda-image {
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+}
+
+// @media(max-width:450px){
+//   .agenda-image{
+//     margin-top: 50%;
+//   }
+// }
